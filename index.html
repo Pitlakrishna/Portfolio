@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Sai Krishna Pitla - Full-Stack Software Engineer with 2+ years of experience in React.js, TypeScript, Java (Spring WebFlux), and Node.js. Architecting resilient, high-throughput enterprise platforms.">
+  <meta name="keywords"
+    content="Sai Krishna Pitla, Full-Stack Engineer, React, TypeScript, Spring Boot, WebFlux, Java, Next.js, Node.js, Portfolio, SDE">
+  <meta name="author" content="Sai Krishna Pitla">
+  <meta name="theme-color" content="#060911">
+
+  <title>Sai Krishna Pitla | Full-Stack Software Engineer</title>
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://sk-s3-bucket-9010.s3-website-ap-southeast-2.amazonaws.com/">
+  <meta property="og:title" content="Sai Krishna Pitla | Full-Stack Software Engineer">
+  <meta property="og:description"
+    content="Full-Stack Software Engineer specializing in React.js, TypeScript, and Reactive Java Spring WebFlux microservices. LeadZump CRM at Fincity.">
+  <!-- TODO: Replace with your hosted preview card image, e.g. https://yourdomain.com/og-preview.png -->
+  <meta property="og:image" content="http://sk-s3-bucket-9010.s3-website-ap-southeast-2.amazonaws.com/og-preview.png">
+  <meta property="og:site_name" content="Sai Krishna Pitla Portfolio">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="http://sk-s3-bucket-9010.s3-website-ap-southeast-2.amazonaws.com/">
+  <meta name="twitter:title" content="Sai Krishna Pitla | Full-Stack Software Engineer">
+  <meta name="twitter:description"
+    content="Full-Stack Software Engineer specializing in React.js, TypeScript, and Reactive Java Spring WebFlux microservices.">
+  <!-- TODO: Replace with your hosted preview card image -->
+  <meta name="twitter:image" content="http://sk-s3-bucket-9010.s3-website-ap-southeast-2.amazonaws.com/og-preview.png">
+
+  <!-- Favicon & Apple Touch Icon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230b0f19'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='monospace' font-weight='900' fill='%2338bdf8'>&lt;SK/&gt;</text></svg>">
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230b0f19'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='monospace' font-weight='900' fill='%2338bdf8'>&lt;SK/&gt;</text></svg>">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Page Scroll Progress Bar -->
+  <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Background 3D Canvas (Desktop Hero Layer) -->
+  <div id="canvas-container" class="canvas-layer" aria-hidden="true"></div>
+
+  <!-- Static Fallback Background for Reduced Motion & Mobile -->
+  <div id="hero-static-fallback" class="hero-static-fallback" aria-hidden="true"></div>
+
+  <!-- Background Ambient Glow Accents -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Sai Krishna Pitla Home">
+        <span class="brand-bracket">&lt;</span><span class="brand-name">SaiKrishna</span><span
+          class="brand-accent">.dev</span><span class="brand-bracket"> /&gt;</span>
+      </a>
+
+      <!-- Navigation Drawer / Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation" aria-modal="true">
+        <!-- Mobile Drawer Header with Close Button -->
+        <div class="mobile-nav-header">
+          <span class="mobile-nav-brand">&lt;Navigation /&gt;</span>
+          <button class="nav-close-btn" id="nav-close-btn" aria-label="Close navigation menu">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Drawer Dedicated CTAs -->
+        <div class="mobile-nav-actions">
+          <a href="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary btn-block">
+            <i data-lucide="file-text"></i>
+            <span>Resume (PDF)</span>
+          </a>
+          <a href="#contact" class="btn btn-primary btn-block mobile-contact-cta">
+            <i data-lucide="message-square"></i>
+            <span>Let's Talk</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Nav Action Right -->
+      <div class="nav-actions">
+        <a href="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-nav"
+          title="View PDF Resume" aria-label="View PDF Resume">
+          <i data-lucide="file-text"></i>
+          <span>Resume</span>
+        </a>
+        <a href="#contact" class="btn btn-cta-nav" aria-label="Go to contact section">
+          <span>Let's Talk</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false"
+          aria-controls="nav-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
+
+    <!-- ======================================================================
+         Hero Section
+         ====================================================================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-container">
+
+        <!-- Hero Left Column -->
+        <div class="hero-content">
+
+          <!-- Availability Pill -->
+          <div class="status-badge">
+            <span class="status-pulse-ring"></span>
+            <span class="status-dot"></span>
+            <span class="status-text">Available for Full-Time Roles &amp; Engineering Challenges</span>
+          </div>
+
+          <!-- Hero Main Title -->
+          <h1 class="hero-title">
+            Engineering scalable systems with <span class="text-gradient">precision</span> &amp; <span
+              class="text-gradient-alt">speed</span>.
+          </h1>
+
+          <!-- Identity & Title -->
+          <div class="hero-identity">
+            <span class="identity-intro">I'm <strong>Sai Krishna Pitla</strong></span>
+            <span class="identity-divider">/</span>
+            <span class="role-pill">Full-Stack Software Engineer</span>
+          </div>
+
+          <!-- Crisp Summary -->
+          <p class="hero-summary">
+            Specialized in architecting high-throughput enterprise web platforms with
+            <strong class="highlight-cyan">React.js</strong>, <strong class="highlight-cyan">TypeScript</strong>, and
+            reactive
+            <strong class="highlight-indigo">Java Spring WebFlux</strong> microservices. Currently engineering
+            <strong>LeadZump CRM</strong> at Fincity for <strong>100+ sales representatives</strong>.
+          </p>
+
+          <!-- Core Stat Metric Badges -->
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <div class="stat-pill-icon"><i data-lucide="briefcase"></i></div>
+              <div class="stat-pill-text">
+                <span class="stat-pill-value">2+ Years</span>
+                <span class="stat-pill-label">Production Exp</span>
+              </div>
+            </div>
+
+            <div class="stat-pill">
+              <div class="stat-pill-icon"><i data-lucide="users"></i></div>
+              <div class="stat-pill-text">
+                <span class="stat-pill-value">100+ Users</span>
+                <span class="stat-pill-label">Enterprise CRM</span>
+              </div>
+            </div>
+
+            <div class="stat-pill">
+              <div class="stat-pill-icon"><i data-lucide="zap"></i></div>
+              <div class="stat-pill-text">
+                <span class="stat-pill-value">WebFlux</span>
+                <span class="stat-pill-label">Reactive Microservices</span>
+              </div>
+            </div>
+
+            <div class="stat-pill">
+              <div class="stat-pill-icon"><i data-lucide="map-pin"></i></div>
+              <div class="stat-pill-text">
+                <span class="stat-pill-value">India</span>
+                <span class="stat-pill-label">Hyderabad &amp; BLR</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary CTAs (Exactly 1 Primary + 1 Secondary) -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" aria-label="View featured engineering projects">
+              <i data-lucide="folder-git-2"></i>
+              <span>View Projects</span>
+            </a>
+
+            <a href="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+              aria-label="Download Resume in PDF format">
+              <i data-lucide="download"></i>
+              <span>Resume PDF</span>
+            </a>
+          </div>
+
+          <!-- Social Links Row with Tooltips & Quick Actions -->
+          <div class="hero-socials">
+            <span class="social-label">Quick Connect:</span>
+            <div class="social-links-wrap">
+              <!-- TODO: Replace with your real LinkedIn Profile URL -->
+              <a href="https://linkedin.com/in/TODO-saikrishna" target="_blank" rel="noopener noreferrer"
+                class="social-icon-btn" aria-label="Sai Krishna Pitla on LinkedIn" data-tooltip="LinkedIn">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <!-- TODO: Replace with your real GitHub Profile URL -->
+              <a href="https://github.com/TODO-saikrishna" target="_blank" rel="noopener noreferrer"
+                class="social-icon-btn" aria-label="Sai Krishna Pitla on GitHub" data-tooltip="GitHub">
+                <i data-lucide="github"></i>
+              </a>
+              <a href="mailto:saikrishnapitla2@gmail.com" class="social-icon-btn"
+                aria-label="Send direct email to saikrishnapitla2@gmail.com"
+                data-tooltip="Email: saikrishnapitla2@gmail.com">
+                <i data-lucide="mail"></i>
+              </a>
+              <button class="social-icon-btn copy-email-btn" data-email="saikrishnapitla2@gmail.com"
+                aria-label="Copy email address to clipboard" data-tooltip="Copy Email">
+                <i data-lucide="copy"></i>
+              </button>
+              <a href="tel:+917995115729" class="social-icon-btn" aria-label="Call Sai Krishna at +91 79951 15729"
+                data-tooltip="+91 79951 15729">
+                <i data-lucide="phone"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column: Interactive System Architecture Card -->
+        <div class="hero-visual-card">
+
+          <!-- Floating Accent Badge Top Right -->
+          <div class="floating-pill float-badge-1">
+            <i data-lucide="zap"></i>
+            <span>Reactive WebFlux APIs</span>
+          </div>
+
+          <!-- Floating Accent Badge Bottom Left -->
+          <div class="floating-pill float-badge-2">
+            <i data-lucide="layers"></i>
+            <span>TypeScript Monorepo</span>
+          </div>
+
+          <!-- Code / System Window Frame -->
+          <div class="terminal-card">
+
+            <!-- Window Topbar -->
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">
+                <i data-lucide="file-code-2"></i>
+                <span>SaiKrishna.config.ts</span>
+              </div>
+              <div class="terminal-badge">TypeScript 5.x</div>
+            </div>
+
+            <!-- Code Content -->
+            <div class="terminal-body">
+              <pre><code><span class="code-keyword">export const</span> <span class="code-const">engineer</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">"Sai Krishna Pitla"</span>,
+  <span class="code-prop">role</span>: <span class="code-str">"Full-Stack Software Engineer"</span>,
+  <span class="code-prop">specialization</span>: {
+    <span class="code-prop">frontend</span>: [<span class="code-str">"React.js"</span>, <span class="code-str">"Next.js"</span>, <span class="code-str">"TypeScript"</span>],
+    <span class="code-prop">backend</span>: [<span class="code-str">"Java Spring WebFlux"</span>, <span class="code-str">"Node.js"</span>],
+    <span class="code-prop">storage</span>: [<span class="code-str">"PostgreSQL"</span>, <span class="code-str">"Prisma"</span>, <span class="code-str">"MongoDB"</span>],
+    <span class="code-prop">devops</span>: [<span class="code-str">"Docker"</span>, <span class="code-str">"Vercel"</span>, <span class="code-str">"Render"</span>]
+  },
+  <span class="code-prop">currentProduct</span>: <span class="code-str">"LeadZump Sales CRM"</span>,
+  <span class="code-prop">activeScale</span>: <span class="code-num">100</span> + <span class="code-str">" daily active sales reps"</span>,
+  <span class="code-prop">status</span>: <span class="code-str">"Available for high-scale challenges"</span>
+};</code></pre>
+            </div>
+
+            <!-- Card Bottom Live System Metrics -->
+            <div class="terminal-footer">
+              <div class="sys-item">
+                <span class="sys-dot"></span>
+                <span class="sys-text">Architecture: <strong>Event-Driven Non-Blocking</strong></span>
+              </div>
+              <div class="sys-fps">
+                <i data-lucide="cpu"></i>
+                <span id="threejs-status">Three.js 3D Active</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About Section">
+        <span>Discover More</span>
+        <i data-lucide="chevron-down"></i>
+      </a>
+    </section>
+
+
+    <!-- ======================================================================
+         About Section
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="user-check"></i> Background</div>
+          <h2 class="section-title">Engineering <span class="text-gradient">Philosophy</span> &amp; Background</h2>
+          <p class="section-description">
+            Bridging resilient, non-blocking backend architectures with intuitive, accessible, and fast client
+            applications.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Narrative Bio Card -->
+          <div class="glass-card about-narrative-card">
+            <div class="card-glow-header">
+              <div class="avatar-badge">
+                <i data-lucide="code-2"></i>
+              </div>
+              <div>
+                <h3 class="narrative-heading">Full-Stack Engineer with 2+ Years of Impact</h3>
+                <span class="narrative-sub">Specializing in React, TypeScript, and Java Spring WebFlux</span>
+              </div>
+            </div>
+
+            <div class="narrative-body">
+              <p>
+                I am a dedicated <strong>Full-Stack Software Engineer</strong> with over 2 years of hands-on experience
+                developing enterprise web applications. My work focuses on building robust systems from high-throughput
+                backend APIs to clean, modular user interfaces that users love.
+              </p>
+              <p>
+                Currently at <strong>Fincity</strong>, I develop and maintain <strong>LeadZump</strong>, an enterprise
+                sales CRM used daily by <strong>100+ sales representatives</strong>. My day-to-day includes architecting
+                reactive microservices with <strong>Java and Spring WebFlux</strong> to handle concurrent queries with
+                low latency, building reusable React modules for deal tracking, and optimizing database queries for high
+                reliability.
+              </p>
+              <p>
+                I take pride in end-to-end engineering rigor: organizing monorepos with <strong>npm-workspaces</strong>
+                and <strong>TypeScript</strong>, enforcing schema safety with <strong>Zod</strong>, securing endpoints
+                with <strong>JWT &amp; Helmet</strong>, and deploying containerized microservices via
+                <strong>Docker</strong>.
+              </p>
+            </div>
+
+            <!-- Core Pillars Checklist -->
+            <div class="narrative-pillars">
+              <div class="pillar-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Reactive &amp; Asynchronous Microservices</span>
+              </div>
+              <div class="pillar-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Component-Driven React &amp; Next.js</span>
+              </div>
+              <div class="pillar-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Query Optimization &amp; Schema Design</span>
+              </div>
+              <div class="pillar-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Docker Containerization &amp; CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value / Metric Highlight Cards -->
+          <div class="about-metrics-column">
+
+            <div class="glass-card metric-card">
+              <div class="metric-card-icon icon-cyan">
+                <i data-lucide="rocket"></i>
+              </div>
+              <div class="metric-card-info">
+                <h4>LeadZump CRM Scale</h4>
+                <p>Supporting 100+ sales representatives across structured sales funnels, real-time pipeline status, and
+                  automated lead conversions.</p>
+                <div class="card-metric-footer">
+                  <span class="pill-mini">Active Production</span>
+                  <span class="pill-mini">Fincity</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card metric-card">
+              <div class="metric-card-icon icon-indigo">
+                <i data-lucide="activity"></i>
+              </div>
+              <div class="metric-card-info">
+                <h4>Non-Blocking Performance</h4>
+                <p>Harnessing Spring WebFlux reactive streams to sustain high concurrent traffic with minimal thread
+                  overhead and low latency.</p>
+                <div class="card-metric-footer">
+                  <span class="pill-mini">Java WebFlux</span>
+                  <span class="pill-mini">Reactive Streams</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card metric-card">
+              <div class="metric-card-icon icon-purple">
+                <i data-lucide="git-fork"></i>
+              </div>
+              <div class="metric-card-info">
+                <h4>Clean Monorepo Design</h4>
+                <p>Architecting decoupled monorepos with npm-workspaces, sharing strict TypeScript contracts across
+                  frontend clients and REST APIs.</p>
+                <div class="card-metric-footer">
+                  <span class="pill-mini">TypeScript</span>
+                  <span class="pill-mini">Prisma ORM</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         Skills Section
+         ====================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="cpu"></i> Tech Stack</div>
+          <h2 class="section-title">Technical <span class="text-gradient">Capabilities</span></h2>
+          <p class="section-description">
+            A comprehensive breakdown of languages, frameworks, databases, and tooling extracted strictly from
+            production experience.
+          </p>
+        </div>
+
+        <!-- Interactive Filter Tabs & Quick Search -->
+        <div class="skills-controls-wrapper">
+          <div class="skills-filter" role="tablist" aria-label="Skills Category Filter">
+            <button class="filter-btn active" data-filter="all">All Skills</button>
+            <button class="filter-btn" data-filter="languages">Languages</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="backend">Backend &amp; APIs</button>
+            <button class="filter-btn" data-filter="databases">Databases</button>
+            <button class="filter-btn" data-filter="devops">DevOps &amp; Tools</button>
+          </div>
+
+          <!-- Live Search Bar -->
+          <div class="skills-search-box">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <input type="text" id="skills-search-input" placeholder="Search a skill (e.g., React, Java, Docker)..."
+              aria-label="Search skills">
+            <button id="skills-search-clear" class="search-clear-btn" aria-label="Clear skill search"
+              title="Clear search" style="display:none;">
+              <i data-lucide="x" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+
+          <!-- 1. Languages -->
+          <div class="glass-card skill-group-card" data-category="languages">
+            <div class="skill-group-header">
+              <div class="skill-group-icon lang-icon">
+                <i data-lucide="terminal"></i>
+              </div>
+              <div>
+                <h3 class="skill-group-title">Programming Languages</h3>
+                <span class="skill-group-sub">Core languages for system development</span>
+              </div>
+            </div>
+            <div class="skill-tag-list">
+              <div class="skill-tag highlighted" data-name="java">
+                <span class="skill-icon-dot dot-amber"></span>
+                <span class="skill-name">Java</span>
+                <span class="skill-badge-level">Core</span>
+              </div>
+              <div class="skill-tag highlighted" data-name="javascript es6+">
+                <span class="skill-icon-dot dot-amber"></span>
+                <span class="skill-name">JavaScript (ES6+)</span>
+                <span class="skill-badge-level">Expert</span>
+              </div>
+              <div class="skill-tag highlighted" data-name="typescript">
+                <span class="skill-icon-dot dot-blue"></span>
+                <span class="skill-name">TypeScript</span>
+                <span class="skill-badge-level">Expert</span>
+              </div>
+              <div class="skill-tag" data-name="python">
+                <span class="skill-icon-dot dot-emerald"></span>
+                <span class="skill-name">Python</span>
+                <span class="skill-badge-level">Scripting</span>
+              </div>
+              <div class="skill-tag" data-name="sql">
+                <span class="skill-icon-dot dot-cyan"></span>
+                <span class="skill-name">SQL</span>
+                <span class="skill-badge-level">Queries</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Frontend -->
+          <div class="glass-card skill-group-card" data-category="frontend">
+            <div class="skill-group-header">
+              <div class="skill-group-icon front-icon">
+                <i data-lucide="layout"></i>
+              </div>
+              <div>
+                <h3 class="skill-group-title">Frontend Engineering</h3>
+                <span class="skill-group-sub">Modern, reactive web interfaces</span>
+              </div>
+            </div>
+            <div class="skill-tag-list">
+              <div class="skill-tag highlighted" data-name="react.js react">
+                <span class="skill-icon-dot dot-cyan"></span>
+                <span class="skill-name">React.js</span>
+                <span class="skill-badge-level">Core</span>
+              </div>
+              <div class="skill-tag highlighted" data-name="next.js next">
+                <span class="skill-icon-dot dot-purple"></span>
+                <span class="skill-name">Next.js</span>
+                <span class="skill-badge-level">SSR / SSG</span>
+              </div>
+              <div class="skill-tag" data-name="html5">
+                <span class="skill-icon-dot dot-amber"></span>
+                <span class="skill-name">HTML5</span>
+              </div>
+              <div class="skill-tag" data-name="css3">
+                <span class="skill-icon-dot dot-blue"></span>
+                <span class="skill-name">CSS3</span>
+              </div>
+              <div class="skill-tag" data-name="tailwind css tailwind">
+                <span class="skill-icon-dot dot-cyan"></span>
+                <span class="skill-name">Tailwind CSS</span>
+              </div>
+              <div class="skill-tag" data-name="bootstrap">
+                <span class="skill-icon-dot dot-purple"></span>
+                <span class="skill-name">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Backend -->
+          <div class="glass-card skill-group-card" data-category="backend">
+            <div class="skill-group-header">
+              <div class="skill-group-icon back-icon">
+                <i data-lucide="server"></i>
+              </div>
+              <div>
+                <h3 class="skill-group-title">Backend &amp; Microservices</h3>
+                <span class="skill-group-sub">Concurrent, resilient services</span>
+              </div>
+            </div>
+            <div class="skill-tag-list">
+              <div class="skill-tag highlighted" data-name="spring boot webflux reactive">
+                <span class="skill-icon-dot dot-emerald"></span>
+                <span class="skill-name">Spring Boot (WebFlux)</span>
+                <span class="skill-badge-level">Reactive</span>
+              </div>
+              <div class="skill-tag highlighted" data-name="node.js node">
+                <span class="skill-icon-dot dot-emerald"></span>
+                <span class="skill-name">Node.js</span>
+                <span class="skill-badge-level">Async</span>
+              </div>
+              <div class="skill-tag" data-name="express.js express">
+                <span class="skill-icon-dot dot-purple"></span>
+                <span class="skill-name">Express.js</span>
+              </div>
+              <div class="skill-tag" data-name="rest apis restful">
+                <span class="skill-icon-dot dot-cyan"></span>
+                <span class="skill-name">REST APIs</span>
+              </div>
+              <div class="skill-tag" data-name="microservices">
+                <span class="skill-icon-dot dot-indigo"></span>
+                <span class="skill-name">Microservices</span>
+              </div>
+              <div class="skill-tag" data-name="jwt authentication tokens auth">
+                <span class="skill-icon-dot dot-amber"></span>
+                <span class="skill-name">JWT Authentication</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Databases -->
+          <div class="glass-card skill-group-card" data-category="databases">
+            <div class="skill-group-header">
+              <div class="skill-group-icon db-icon">
+                <i data-lucide="database"></i>
+              </div>
+              <div>
+                <h3 class="skill-group-title">Databases &amp; Storage</h3>
+                <span class="skill-group-sub">Relational, Document &amp; Cache</span>
+              </div>
+            </div>
+            <div class="skill-tag-list">
+              <div class="skill-tag highlighted" data-name="postgresql postgres">
+                <span class="skill-icon-dot dot-blue"></span>
+                <span class="skill-name">PostgreSQL</span>
+                <span class="skill-badge-level">Primary</span>
+              </div>
+              <div class="skill-tag" data-name="mysql">
+                <span class="skill-icon-dot dot-cyan"></span>
+                <span class="skill-name">MySQL</span>
+              </div>
+              <div class="skill-tag highlighted" data-name="mongodb mongo nosql">
+                <span class="skill-icon-dot dot-emerald"></span>
+                <span class="skill-name">MongoDB</span>
+                <span class="skill-badge-level">NoSQL</span>
+              </div>
+              <div class="skill-tag" data-name="query optimization indexing">
+                <span class="skill-icon-dot dot-amber"></span>
+                <span class="skill-name">Query Optimization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Frameworks & Libraries -->
+          <div class="glass-card skill-group-card" data-category="backend frontend">
+            <div class="skill-group-header">
+              <div class="skill-group-icon lib-icon">
+                <i data-lucide="library"></i>
+              </div>
+              <div>
+                <h3 class="skill-group-title">Frameworks &amp; Libraries</h3>
+                <span class="skill-group-sub">Data fetching &amp; data validation</span>
+              </div>
+            </div>
+            <div class="skill-tag-list">
+              <div class="skill-tag highlighted" data-name="tanstack react query query">
+                <span class="skill-icon-dot dot-amber"></span>
+                <span class="skill-name">TanStack React Query</span>
+                <span class="skill-badge-level">State</span>
+              </div>
+              <div class="skill-tag highlighted" data-name="prisma orm prisma">
+                <span class="skill-icon-dot dot-cyan"></span>
+                <span class="skill-name">Prisma</span>
+                <span class="skill-badge-level">ORM</span>
+              </div>
+              <div class="skill-tag" data-name="zod validation schemas">
+                <span class="skill-icon-dot dot-blue"></span>
+                <span class="skill-name">Zod Validation</span>
+              </div>
+              <div class="skill-tag" data-name="axios http">
+                <span class="skill-icon-dot dot-purple"></span>
+                <span class="skill-name">Axios</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. DevOps & Tools -->
+          <div class="glass-card skill-group-card" data-category="devops">
+            <div class="skill-group-header">
+              <div class="skill-group-icon dev-icon">
+                <i data-lucide="cog"></i>
+              </div>
+              <div>
+                <h3 class="skill-group-title">DevOps &amp; Developer Tools</h3>
+                <span class="skill-group-sub">Deployment pipelines &amp; tooling</span>
+              </div>
+            </div>
+            <div class="skill-tag-list">
+              <div class="skill-tag highlighted" data-name="docker containerization">
+                <span class="skill-icon-dot dot-blue"></span>
+                <span class="skill-name">Docker</span>
+                <span class="skill-badge-level">Containers</span>
+              </div>
+              <div class="skill-tag" data-name="git github version control">
+                <span class="skill-icon-dot dot-amber"></span>
+                <span class="skill-name">Git &amp; GitHub</span>
+              </div>
+              <div class="skill-tag" data-name="postman api testing">
+                <span class="skill-icon-dot dot-amber"></span>
+                <span class="skill-name">Postman</span>
+              </div>
+              <div class="skill-tag" data-name="vercel cloud hosting">
+                <span class="skill-icon-dot dot-purple"></span>
+                <span class="skill-name">Vercel</span>
+              </div>
+              <div class="skill-tag" data-name="render hosting backend">
+                <span class="skill-icon-dot dot-cyan"></span>
+                <span class="skill-name">Render</span>
+              </div>
+              <div class="skill-tag" data-name="ci/cd fundamentals pipelines">
+                <span class="skill-icon-dot dot-emerald"></span>
+                <span class="skill-name">CI/CD Fundamentals</span>
+              </div>
+              <div class="skill-tag" data-name="eclipse ide">
+                <span class="skill-icon-dot dot-indigo"></span>
+                <span class="skill-name">Eclipse</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         Experience Timeline Section
+         ====================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="briefcase"></i> Track Record</div>
+          <h2 class="section-title">Professional <span class="text-gradient">Experience</span></h2>
+          <p class="section-description">
+            Production software roles delivering enterprise sales automation and healthcare web systems.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- Experience 1: Fincity -->
+          <div class="timeline-item current-job">
+            <div class="timeline-rail">
+              <div class="timeline-avatar fincity-avatar">
+                <span>F</span>
+              </div>
+              <div class="rail-line"></div>
+            </div>
+
+            <div class="timeline-card-wrapper glass-card">
+
+              <!-- Timeline Top Badge & Dates -->
+              <div class="timeline-card-head">
+                <div class="company-badge-row">
+                  <span class="current-role-badge">
+                    <span class="live-dot"></span> Current Role
+                  </span>
+                  <span class="timeline-date-chip">
+                    <i data-lucide="calendar"></i>
+                    <span>Sep 2024 – Present</span>
+                  </span>
+                </div>
+
+                <h3 class="role-title">Software Development Engineer</h3>
+                <div class="company-subline">
+                  <span class="company-title">Fincity</span>
+                  <span class="company-sep">•</span>
+                  <span class="company-loc"><i data-lucide="map-pin"></i> Bangalore, India</span>
+                </div>
+              </div>
+
+              <!-- Overview Box -->
+              <div class="timeline-impact-banner">
+                <i data-lucide="rocket"></i>
+                <span>Key Mission: Lead engineer developing <strong>LeadZump</strong>, an enterprise sales CRM
+                  empowering <strong>100+ sales representatives</strong> to capture, track, and convert leads through
+                  structured funnels.</span>
+              </div>
+
+              <!-- Bullet Points -->
+              <ul class="timeline-bullet-list">
+                <li>
+                  <div class="bullet-icon"><i data-lucide="check"></i></div>
+                  <div class="bullet-text">
+                    Designed and implemented <strong>non-blocking microservices and REST APIs</strong> using
+                    <strong>Java and Spring WebFlux</strong> to handle concurrent user requests with exceptionally low
+                    latency.
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon"><i data-lucide="check"></i></div>
+                  <div class="bullet-text">
+                    Developed modular, reusable <strong>React.js components</strong> with modern JavaScript and CSS for
+                    complex pipeline tracking, deal-status real-time updates, and automated follow-up workflows.
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon"><i data-lucide="check"></i></div>
+                  <div class="bullet-text">
+                    Integrated front-end modules with backend REST APIs, maintaining strict client and server state
+                    consistency across distributed user actions.
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon"><i data-lucide="check"></i></div>
+                  <div class="bullet-text">
+                    Optimized database queries and implemented secure REST endpoints to support reliable, fault-tolerant
+                    data synchronization between services and the client.
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Technologies Footer -->
+              <div class="timeline-tech-footer">
+                <span class="tech-label">Stack:</span>
+                <div class="tech-chip-group">
+                  <span class="tech-chip">React.js</span>
+                  <span class="tech-chip">Java</span>
+                  <span class="tech-chip">Spring WebFlux</span>
+                  <span class="tech-chip">REST APIs</span>
+                  <span class="tech-chip">Microservices</span>
+                  <span class="tech-chip">PostgreSQL</span>
+                  <span class="tech-chip">Docker</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Experience 2: Orbysol Systems -->
+          <div class="timeline-item past-job">
+            <div class="timeline-rail">
+              <div class="timeline-avatar orbysol-avatar">
+                <span>O</span>
+              </div>
+            </div>
+
+            <div class="timeline-card-wrapper glass-card">
+
+              <!-- Timeline Top Badge & Dates -->
+              <div class="timeline-card-head">
+                <div class="company-badge-row">
+                  <span class="past-role-badge">Internship</span>
+                  <span class="timeline-date-chip">
+                    <i data-lucide="calendar"></i>
+                    <span>Mar 2024 – Jun 2024</span>
+                  </span>
+                </div>
+
+                <h3 class="role-title">Software Developer Intern</h3>
+                <div class="company-subline">
+                  <span class="company-title">Orbysol Systems</span>
+                  <span class="company-sep">•</span>
+                  <span class="company-loc"><i data-lucide="map-pin"></i> Hyderabad, India</span>
+                </div>
+              </div>
+
+              <!-- Overview Box -->
+              <div class="timeline-impact-banner secondary-banner">
+                <i data-lucide="heart-pulse"></i>
+                <span>Key Mission: Built full-stack features for a high-availability healthcare web application spanning
+                  responsive interfaces and robust REST endpoints.</span>
+              </div>
+
+              <!-- Bullet Points -->
+              <ul class="timeline-bullet-list">
+                <li>
+                  <div class="bullet-icon"><i data-lucide="check"></i></div>
+                  <div class="bullet-text">
+                    Developed cross-device responsive features for a healthcare web application across the front end
+                    using <strong>ReactJS</strong> and <strong>Bootstrap</strong>.
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon"><i data-lucide="check"></i></div>
+                  <div class="bullet-text">
+                    Built backend REST APIs in <strong>Spring Boot</strong> and handled schema integration with
+                    <strong>SQL and MongoDB</strong> databases.
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon"><i data-lucide="check"></i></div>
+                  <div class="bullet-text">
+                    Extensively tested, debugged, and validated API endpoints using <strong>Postman</strong> for
+                    contract consistency and security compliance.
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Technologies Footer -->
+              <div class="timeline-tech-footer">
+                <span class="tech-label">Stack:</span>
+                <div class="tech-chip-group">
+                  <span class="tech-chip">ReactJS</span>
+                  <span class="tech-chip">Spring Boot</span>
+                  <span class="tech-chip">Bootstrap</span>
+                  <span class="tech-chip">SQL</span>
+                  <span class="tech-chip">MongoDB</span>
+                  <span class="tech-chip">Postman</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         Projects Section
+         ====================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="folder-check"></i> Showcase</div>
+          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-description">
+            Production-ready implementations demonstrating monorepo modularity, high concurrency, and clean API design.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project Card 1: B2B Business Management Portal -->
+          <article class="glass-card project-showcase-card">
+
+            <!-- Browser Mockup Window Bar -->
+            <div class="project-browser-bar">
+              <div class="browser-dots">
+                <span class="b-dot"></span>
+                <span class="b-dot"></span>
+                <span class="b-dot"></span>
+              </div>
+              <div class="browser-address">
+                <i data-lucide="lock" aria-hidden="true"></i>
+                <span>b2b-portal.production.app</span>
+              </div>
+              <div class="project-type-chip">Monorepo Full-Stack</div>
+            </div>
+
+            <!-- Project UI Screenshot / Preview Mockup -->
+            <div class="project-preview-frame">
+              <div class="project-mockup-graphic mockup-b2b" role="img"
+                aria-label="B2B Business Management Portal dashboard showing buyer management, orders, and data tables">
+                <div class="mockup-header-bar">
+                  <span class="mock-pill active">Buyers (142)</span>
+                  <span class="mock-pill">Catalog</span>
+                  <span class="mock-pill">Orders</span>
+                  <span class="mock-search">Filter buyers...</span>
+                </div>
+                <div class="mockup-table-preview">
+                  <div class="mock-row head"><span>Buyer
+                      Name</span><span>Region</span><span>Tier</span><span>Status</span></div>
+                  <div class="mock-row"><span>Apex Industrial</span><span>North America</span><span
+                      class="mock-tier">Enterprise</span><span class="mock-status active">Active</span></div>
+                  <div class="mock-row"><span>Vanguard Tech</span><span>APAC</span><span
+                      class="mock-tier">Mid-Market</span><span class="mock-status active">Active</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-inner">
+              <div class="project-title-row">
+                <div>
+                  <h3 class="project-name">B2B Business Management Portal</h3>
+                  <p class="project-tagline">Enterprise buyer, catalog, order workflow &amp; task administration system
+                  </p>
+                </div>
+                <div class="deployment-status-pill">
+                  <span class="dep-dot"></span> Deployed
+                </div>
+              </div>
+
+              <p class="project-summary-text">
+                Built a full-stack B2B portal to manage buyers, categories, orders, and tasks with server-side search,
+                pagination, date-range filtering, and real-time order total computation.
+              </p>
+
+              <!-- Technical Highlights -->
+              <div class="project-features-box">
+                <div class="feat-item">
+                  <i data-lucide="layers"></i>
+                  <span><strong>Monorepo Architecture:</strong> Architected with <code>npm-workspaces</code> separating
+                    Next.js client from a layered Express.js REST API with strict TypeScript and Prisma ORM.</span>
+                </div>
+                <div class="feat-item">
+                  <i data-lucide="shield-check"></i>
+                  <span><strong>Enterprise Security:</strong> Hardened with JWT authentication, bcrypt password hashing,
+                    Helmet/CORS protection, and schema-level Zod request validation.</span>
+                </div>
+                <div class="feat-item">
+                  <i data-lucide="cloud"></i>
+                  <span><strong>Docker &amp; Cloud Deployment:</strong> Containerized with Docker and deployed to
+                    production on Vercel (frontend), Render (backend), and Neon (serverless PostgreSQL).</span>
+                </div>
+              </div>
+
+              <!-- Tech Badges -->
+              <div class="project-badges-row">
+                <span class="badge-tech">Next.js</span>
+                <span class="badge-tech">Express.js</span>
+                <span class="badge-tech">TypeScript</span>
+                <span class="badge-tech">Prisma ORM</span>
+                <span class="badge-tech">PostgreSQL (Neon)</span>
+                <span class="badge-tech">Tailwind CSS</span>
+                <span class="badge-tech">TanStack React Query</span>
+                <span class="badge-tech">Docker</span>
+              </div>
+
+              <!-- CTAs (Cleaned links with explicit TODO markers) -->
+              <div class="project-action-bar">
+                <!-- TODO: Replace with your real Live Demo URL, e.g. https://b2b-portal.yourdomain.com -->
+                <a href="https://github.com/TODO-saikrishna/b2b-business-portal" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="Visit B2B Portal Live Demo">
+                  <i data-lucide="external-link"></i>
+                  <span>Live Demo</span>
+                </a>
+                <!-- TODO: Replace with your real GitHub repository URL -->
+                <a href="https://github.com/TODO-saikrishna/b2b-business-portal" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-secondary btn-sm"
+                  aria-label="View B2B Portal GitHub Source Code">
+                  <i data-lucide="github"></i>
+                  <span>GitHub Repository</span>
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- Project Card 2: LeadZump CRM Showcase -->
+          <article class="glass-card project-showcase-card">
+
+            <!-- Browser Mockup Window Bar -->
+            <div class="project-browser-bar">
+              <div class="browser-dots">
+                <span class="b-dot"></span>
+                <span class="b-dot"></span>
+                <span class="b-dot"></span>
+              </div>
+              <div class="browser-address">
+                <i data-lucide="lock" aria-hidden="true"></i>
+                <span>leadzump.sales.internal</span>
+              </div>
+              <div class="project-type-chip">Active Production CRM</div>
+            </div>
+
+            <!-- Project UI Screenshot / Preview Mockup -->
+            <div class="project-preview-frame">
+              <div class="project-mockup-graphic mockup-crm" role="img"
+                aria-label="LeadZump Sales CRM pipeline dashboard showing deal stages, sales reps metrics, and conversion funnels">
+                <div class="mockup-header-bar">
+                  <span class="mock-pill active">Pipeline Funnel</span>
+                  <span class="mock-pill">100+ Reps Online</span>
+                  <span class="mock-search">Search deals...</span>
+                </div>
+                <div class="mockup-kanban-preview">
+                  <div class="kanban-col"><span class="k-head">Prospects (48)</span>
+                    <div class="k-card">Enterprise SaaS - $42k</div>
+                  </div>
+                  <div class="kanban-col"><span class="k-head">Negotiation (19)</span>
+                    <div class="k-card">Fintech App - $85k</div>
+                  </div>
+                  <div class="kanban-col"><span class="k-head">Won (64)</span>
+                    <div class="k-card">Health API - $120k</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-inner">
+              <div class="project-title-row">
+                <div>
+                  <h3 class="project-name">LeadZump – Enterprise Sales CRM</h3>
+                  <p class="project-tagline">High-volume sales funnel, deal tracking &amp; automated lead follow-up
+                    engine</p>
+                </div>
+                <div class="deployment-status-pill live-crm">
+                  <span class="dep-dot crm-dot"></span> 100+ Active Users
+                </div>
+              </div>
+
+              <p class="project-summary-text">
+                Enterprise sales CRM engineered to streamline structured sales funnels, pipeline stages, automated deal
+                updates, and multi-channel lead tracking for 100+ sales representatives.
+              </p>
+
+              <!-- Technical Highlights -->
+              <div class="project-features-box">
+                <div class="feat-item">
+                  <i data-lucide="zap"></i>
+                  <span><strong>Non-Blocking WebFlux:</strong> Microservices engineered in Java Spring WebFlux to serve
+                    high concurrent traffic with low latency and resilient error handling.</span>
+                </div>
+                <div class="feat-item">
+                  <i data-lucide="layout"></i>
+                  <span><strong>Interactive React Interface:</strong> Reusable React modules for deal pipeline kanban,
+                    status transitions, and real-time state synchronization with backend services.</span>
+                </div>
+                <div class="feat-item">
+                  <i data-lucide="database"></i>
+                  <span><strong>Data Reliability:</strong> Optimized database queries across PostgreSQL and MongoDB to
+                    handle high-frequency reads and updates without bottlenecking.</span>
+                </div>
+              </div>
+
+              <!-- Tech Badges -->
+              <div class="project-badges-row">
+                <span class="badge-tech">React.js</span>
+                <span class="badge-tech">Java</span>
+                <span class="badge-tech">Spring WebFlux</span>
+                <span class="badge-tech">REST Microservices</span>
+                <span class="badge-tech">PostgreSQL</span>
+                <span class="badge-tech">MongoDB</span>
+                <span class="badge-tech">Docker</span>
+              </div>
+
+              <!-- CTAs -->
+              <div class="project-action-bar">
+                <a href="#experience" class="btn btn-primary btn-sm"
+                  aria-label="View LeadZump CRM details in Experience section">
+                  <i data-lucide="briefcase"></i>
+                  <span>View in Experience</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary btn-sm" aria-label="Inquire for LeadZump demo">
+                  <i data-lucide="mail"></i>
+                  <span>Inquire for Demo</span>
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         Education Section
+         ====================================================================== -->
+    <section class="section" id="education">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="graduation-cap"></i> Academics</div>
+          <h2 class="section-title">Education &amp; <span class="text-gradient">Foundation</span></h2>
+          <p class="section-description">
+            Academic background in analytical problem-solving, computational logic, and mathematics.
+          </p>
+        </div>
+
+        <div class="education-grid">
+
+          <!-- Education 1: Lovely Professional University -->
+          <div class="glass-card education-card">
+            <div class="edu-card-top">
+              <div class="edu-badge-icon">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="edu-timeline-pill">
+                <i data-lucide="calendar"></i>
+                <span>Jun 2019 – Jul 2023</span>
+              </div>
+            </div>
+
+            <div class="edu-card-main">
+              <h3 class="edu-degree-title">Bachelor of Technology (B.Tech)</h3>
+              <h4 class="edu-school-name">Lovely Professional University</h4>
+              <p class="edu-major-text">Major: Civil Engineering</p>
+            </div>
+
+            <div class="edu-card-foot">
+              <div class="edu-score-pill">
+                <i data-lucide="check-circle-2"></i>
+                <span>CGPA: <strong>6.95</strong></span>
+              </div>
+              <div class="edu-location-pill">
+                <i data-lucide="map-pin"></i>
+                <span>Phagwara, Punjab</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 2: Gurukrupa Junior College -->
+          <div class="glass-card education-card">
+            <div class="edu-card-top">
+              <div class="edu-badge-icon icon-secondary">
+                <i data-lucide="book-open"></i>
+              </div>
+              <div class="edu-timeline-pill">
+                <i data-lucide="calendar"></i>
+                <span>Jun 2017 – Jun 2019</span>
+              </div>
+            </div>
+
+            <div class="edu-card-main">
+              <h3 class="edu-degree-title">Intermediate – MPC</h3>
+              <h4 class="edu-school-name">Gurukrupa Junior College</h4>
+              <p class="edu-major-text">Mathematics, Physics &amp; Chemistry</p>
+            </div>
+
+            <div class="edu-card-foot">
+              <div class="edu-score-pill highlight-score">
+                <i data-lucide="star"></i>
+                <span>Score: <strong>91.5%</strong></span>
+              </div>
+              <div class="edu-location-pill">
+                <i data-lucide="map-pin"></i>
+                <span>Siddipet, Telangana</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         Contact Section
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="message-square"></i> Communication</div>
+          <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+          <p class="section-description">
+            Available for full-time Full-Stack Engineer roles, scalable architectures, and engineering discussions.
+          </p>
+        </div>
+
+        <div class="contact-card-container glass-card">
+          <div class="contact-split">
+
+            <!-- Left Info Panel -->
+            <div class="contact-direct-panel">
+              <h3 class="contact-title">Let's build something exceptional together</h3>
+              <p class="contact-lead">
+                Whether you have an open engineering role, a technical question, or want to discuss reactive
+                microservices and React architectures, my inbox is always open.
+              </p>
+
+              <!-- Contact Action Items -->
+              <div class="contact-action-list">
+
+                <!-- Email Item -->
+                <div class="contact-action-item">
+                  <div class="action-icon email-icon">
+                    <i data-lucide="mail"></i>
+                  </div>
+                  <div class="action-details">
+                    <span class="action-label">Email Address</span>
+                    <a href="mailto:saikrishnapitla2@gmail.com" class="action-value">saikrishnapitla2@gmail.com</a>
+                  </div>
+                  <button class="btn btn-glass btn-sm copy-email-btn" data-email="saikrishnapitla2@gmail.com"
+                    aria-label="Copy email">
+                    <i data-lucide="copy"></i>
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+                <!-- Phone Item -->
+                <div class="contact-action-item">
+                  <div class="action-icon phone-icon">
+                    <i data-lucide="phone"></i>
+                  </div>
+                  <div class="action-details">
+                    <span class="action-label">Phone &amp; WhatsApp</span>
+                    <a href="tel:+917995115729" class="action-value">+91 79951 15729</a>
+                  </div>
+                  <a href="tel:+917995115729" class="btn btn-glass btn-sm" aria-label="Call phone">
+                    <i data-lucide="phone-call"></i>
+                    <span>Call</span>
+                  </a>
+                </div>
+
+                <!-- Location Item -->
+                <div class="contact-action-item">
+                  <div class="action-icon loc-icon">
+                    <i data-lucide="map-pin"></i>
+                  </div>
+                  <div class="action-details">
+                    <span class="action-label">Location</span>
+                    <span class="action-value">Hyderabad, Telangana &amp; Bangalore, India</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Social Links Row -->
+              <div class="contact-social-pills">
+                <!-- TODO: Replace with your real LinkedIn Profile URL -->
+                <a href="https://linkedin.com/in/TODO-saikrishna" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary" aria-label="Visit Sai Krishna's LinkedIn Profile">
+                  <i data-lucide="linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <!-- TODO: Replace with your real GitHub Profile URL -->
+                <a href="https://github.com/TODO-saikrishna" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary" aria-label="Visit Sai Krishna's GitHub Profile">
+                  <i data-lucide="github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                  aria-label="Download Resume in PDF format">
+                  <i data-lucide="file-text"></i>
+                  <span>Resume PDF</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Message Composer -->
+            <div class="contact-form-panel">
+              <form id="contact-form" class="contact-form-styled" action="https://api.web3forms.com/submit"
+                method="POST">
+                <!-- TODO: Get your free Web3Forms Access Key at https://web3forms.com (or use https://formspree.io/f/YOUR_ID) and replace below -->
+                <input type="hidden" name="access_key" id="form-access-key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                <input type="hidden" name="subject" value="New Portfolio Contact Submission - SaiKrishna.dev">
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+                <h4 class="form-heading">Send a Direct Message</h4>
+                <p class="form-subtext">Submit directly through the form with instant API delivery, or fallback to your
+                  default email client.</p>
+
+                <div class="form-field-group">
+                  <label for="c-name">Your Name</label>
+                  <input type="text" id="c-name" name="name" required placeholder="John Doe" class="styled-input"
+                    autocomplete="name">
+                </div>
+
+                <div class="form-field-group">
+                  <label for="c-email">Your Email</label>
+                  <input type="email" id="c-email" name="email" required placeholder="john@example.com"
+                    class="styled-input" autocomplete="email">
+                </div>
+
+                <div class="form-field-group">
+                  <label for="c-subject">Subject</label>
+                  <input type="text" id="c-subject" name="subject" required
+                    placeholder="Software Engineer Opportunity / Collaboration" class="styled-input">
+                </div>
+
+                <div class="form-field-group">
+                  <label for="c-message">Message</label>
+                  <textarea id="c-message" name="message" rows="4" required
+                    placeholder="Hi Sai Krishna, I came across your portfolio and would love to discuss..."
+                    class="styled-textarea"></textarea>
+                </div>
+
+                <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-block">
+                  <i data-lucide="send"></i>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       Footer
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-upper">
+        <div>
+          <a href="#hero" class="footer-logo" aria-label="Sai Krishna Pitla Home">
+            <span class="brand-bracket">&lt;</span>SaiKrishna<span class="brand-accent">.dev</span><span
+              class="brand-bracket"> /&gt;</span>
+          </a>
+          <p class="footer-motto">
+            Full-Stack Software Engineer · React.js, TypeScript &amp; Reactive Java Spring WebFlux.
+          </p>
+        </div>
+
+        <nav class="footer-nav-links" aria-label="Footer Navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+          <a href="Sai_Krishna_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+        </nav>
+      </div>
+
+      <div class="footer-lower">
+        <p>&copy; <span id="current-year">2026</span> Sai Krishna Pitla. All rights reserved.</p>
+        <p class="footer-tech-tag">Crafted with Semantic HTML5, Modern CSS3, Three.js &amp; Lucide Icons.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button with Scroll Progress Ring -->
+  <button id="back-to-top" class="floating-back-to-top" aria-label="Back to Top" title="Back to top">
+    <svg class="progress-ring" width="48" height="48" aria-hidden="true">
+      <circle class="progress-ring-circle" stroke="rgba(56, 189, 248, 0.4)" stroke-width="3" fill="transparent" r="20"
+        cx="24" cy="24" />
+    </svg>
+    <i data-lucide="arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Visual Toast Notification -->
+  <div id="toast" class="toast-notification" role="status" aria-live="polite" aria-atomic="true">
+    <div class="toast-icon-circle">
+      <i data-lucide="check" id="toast-icon" aria-hidden="true"></i>
+    </div>
+    <div class="toast-body">
+      <div class="toast-header-text" id="toast-title">Copied to Clipboard!</div>
+      <div class="toast-sub-text" id="toast-message">saikrishnapitla2@gmail.com</div>
+    </div>
+    <button class="toast-close" id="toast-close" aria-label="Dismiss notification">
+      <i data-lucide="x" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
